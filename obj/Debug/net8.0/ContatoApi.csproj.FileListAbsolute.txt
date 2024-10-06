@@ -1,0 +1,7 @@
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.csproj.AssemblyReference.cache
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.AssemblyInfoInputs.cache
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.AssemblyInfo.cs
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.csproj.CoreCompileInputs.cache
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fabricio\Desktop\cp5\obj\Debug\net8.0\ContatoApi.MvcApplicationPartsAssemblyInfo.cache
