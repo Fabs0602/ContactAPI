@@ -8,9 +8,10 @@ namespace ContatoApi.Services
     {
         private readonly IMongoCollection<Contato> _contatos;
 
-        public ContatoService(IConfiguration config)
+        public ContatoService(IConnectionStringProvider connectionStringProvider)
         {
-            var client = new MongoClient(config.GetConnectionString("MongoDb"));
+            var connectionString = connectionStringProvider.GetConnectionString("MongoDb");
+            var client = new MongoClient(connectionString);
             var database = client.GetDatabase("ContatoDb");
             _contatos = database.GetCollection<Contato>("Contatos");
         }
@@ -18,7 +19,7 @@ namespace ContatoApi.Services
         public async Task<List<Contato>> GetAsync() => 
             await _contatos.Find(c => true).ToListAsync();
 
-        public async Task<Contato> GetAsync(string id) =>
+        public virtual async Task<Contato> GetAsync(string id) =>
             await _contatos.Find(c => c.Id == id).FirstOrDefaultAsync();
 
         public async Task CreateAsync(Contato contato) =>
