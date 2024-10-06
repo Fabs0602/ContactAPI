@@ -1,7 +1,6 @@
 using ContatoApi.Models;
 using ContatoApi.Services;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 
 namespace ContatoApi.Controllers
 {
@@ -32,8 +31,16 @@ namespace ContatoApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Create(Contato contato)
+        public async Task<ActionResult> Create([FromBody] Contato contato)
         {
+            if (contato == null)
+            {
+                return BadRequest("Contato não pode ser nulo.");
+            }
+
+            // Remova a validação do campo Id
+            contato.Id = null;
+
             await _contatoService.CreateAsync(contato);
             return CreatedAtAction(nameof(Get), new { id = contato.Id }, contato);
         }
