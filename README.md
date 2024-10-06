@@ -1,104 +1,42 @@
-# ContatoApi
+ContatoApi
+Descrição
+A ContatoApi é uma API para gerenciar contatos. Ela permite criar, ler, atualizar e deletar contatos armazenados em um banco de dados MongoDB.
 
-ContatoApi é uma API que eu fiz para gerenciar contatos, construída com ASP.NET Core e MongoDB.
+Estrutura do Projeto
+Models: Contém as classes de modelo, como Contato.
+Services: Contém os serviços que encapsulam a lógica de negócios e a interação com o banco de dados.
+Controllers: Contém os controladores que expõem os endpoints da API.
+Tests: Contém os testes unitários para os controladores e serviços.
+Dependências
+.NET 8.0
+MongoDB.Driver
+Moq
+xUnit
+Configuração
+Clone o repositório:
 
-## Funcionalidades
+Restaure as dependências:
 
-- Adicionar um novo contato
-- Atualizar um contato existente
-- Deletar um contato
-- Listar todos os contatos
-- Obter detalhes de um contato específico
+Configure a string de conexão do MongoDB no arquivo appsettings.json:
 
-## Tecnologias Utilizadas
+Executando a API
+Para executar a API, use o comando:
 
-- ASP.NET Core
-- MongoDB
-- MongoDB.Driver
-- Newtonsoft.Json
+1 vulnerability
+A API estará disponível em http://localhost:5000.
 
-## Estrutura do Projeto
+Testes
+Os testes unitários estão localizados no projeto ContatoApi.Tests. Eles utilizam o framework xUnit e a biblioteca Moq para criar mocks dos serviços.
 
-- `Models/Contato.cs`: Define a estrutura do modelo de dados `Contato`.
-- `Services/ContatoService.cs`: Contém a lógica de negócios para gerenciar contatos.
-- `Controllers/ContatosController.cs`: Controlador que expõe endpoints para operações CRUD.
+Executando os Testes
+Para executar os testes, use o comando:
 
-## Instalação
+Exemplos de Testes
+Teste para Verificar se o Contato Não Existe
+Este teste verifica se o método Get do ContatosController retorna um NotFoundResult quando o contato não é encontrado.
 
-1. Clone o repositório:
+Teste para Verificar se o Contato Existe
+Este teste verifica se o método Get do ContatosController retorna o contato correto quando ele existe.
 
-    ```sh
-    git clone https://github.com/Fabs0602/ContactAPI.git
-    cd ContactAPI
-    ```
-
-2. Configure a string de conexão do MongoDB no arquivo `appsettings.json`:
-
-    ```json
-    {
-      "ConnectionStrings": {
-        "MongoDb": "sua_string_de_conexao"
-      }
-    }
-    ```
-
-3. Restaure as dependências e execute o projeto:
-
-    ```sh
-    dotnet restore
-    dotnet run
-    ```
-
-## Endpoints
-
-### Adicionar um Novo Contato
-
-- **URL**: `/api/Contatos`
-- **Método**: `POST`
-- **Corpo da Requisição**:
-
-    ```json
-    {
-      "nome": "Nome do Contato",
-      "telefone": 123456789,
-      "email": "email@exemplo.com"
-    }
-    ```
-
-### Atualizar um Contato
-
-- **URL**: `/api/Contatos/{id}`
-- **Método**: `PUT`
-- **Corpo da Requisição**:
-
-    ```json
-    {
-      "id": "id_do_contato",
-      "nome": "Nome Atualizado",
-      "telefone": 987654321,
-      "email": "email@atualizado.com"
-    }
-    ```
-
-### Deletar um Contato
-
-- **URL**: `/api/Contatos/{id}`
-- **Método**: `DELETE`
-
-### Listar Todos os Contatos
-
-- **URL**: `/api/Contatos`
-- **Método**: `GET`
-
-### Obter Detalhes de um Contato
-
-- **URL**: `/api/Contatos/{id}`
-- **Método**: `GET`
-
-## Contribuição
-
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`).
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`).
-4. Faça um push para a branch (`git push origin feature/nova-feature`).
-5. Crie um novo Pull Request.
+Contribuição
+Se você deseja contribuir com este projeto, por favor, faça um fork do repositório e envie um pull request com suas alterações.
