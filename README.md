@@ -106,12 +106,9 @@ Para executar os testes, use o seguinte comando:
 ```sh
 dotnet test
 Teste para Verificar se o Contato Não Existe
-Este teste verifica se o método Get do ContatosController retorna um NotFoundResult quando o contato
+Teste verifica se o método Get do ContatosController retorna um NotFoundResult quando o contato
 não é encontrado.
 
-
-Teste para Verificar se o Contato Existe
-Descrição: Este teste verifica se o método Get do ContatosController retorna o contato correto quando ele existe no banco de dados. O teste assegura que a API retorna os dados esperados para um contato específico, garantindo que a consulta ao banco de dados funcione corretamente e que os dados retornados estejam completos e corretos.
 
 [Fact]
 public async Task Get_ReturnsContato_WhenContatoExists()
