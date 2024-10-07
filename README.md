@@ -106,7 +106,8 @@ Para executar os testes, use o seguinte comando:
 ```sh
 dotnet test
 Teste para Verificar se o Contato Não Existe
-Este teste verifica se o método Get do ContatosController retorna um NotFoundResult quando o contato não é encontrado.
+Este teste verifica se o método Get do ContatosController retorna um NotFoundResult quando o contato
+não é encontrado.
 
 
 Teste para Verificar se o Contato Existe
