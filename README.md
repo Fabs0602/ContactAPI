@@ -25,6 +25,7 @@
 
 ## Instalação
 
+
 1. Clone o repositório:
 
     ```sh
@@ -94,6 +95,51 @@
 
 - **URL**: `/api/Contatos/{id}`
 - **Método**: `GET`
+
+## Instalação do MongoDB Localmente
+
+Passos para instalação:
+Baixar o MongoDB:
+
+Acesse o site oficial do MongoDB: https://www.mongodb.com/try/download/community.
+Escolha sua plataforma (Windows, macOS, Linux).
+
+Faça o download da versão Community Server.
+Instalar o MongoDB:
+
+Siga as instruções de instalação de acordo com o sistema operacional escolhido.
+No Windows, certifique-se de marcar a opção Install MongoDB as a Service para que o MongoDB seja iniciado automaticamente.
+Verificar a Instalação:
+
+Após a instalação, abra o terminal ou prompt de comando e digite o comando:
+
+```sh
+mongod --version
+```
+Isso deve exibir a versão do MongoDB instalada.
+Executar o MongoDB Localmente:
+
+No Windows, o MongoDB será iniciado automaticamente como um serviço. No Linux e macOS, você pode iniciar o MongoDB usando o comando:
+
+mongod
+Conectar ao MongoDB:
+
+O MongoDB estará rodando na porta padrão 27017. Para conectar ao MongoDB localmente, utilize a string de conexão:
+json
+Copiar código
+```sh
+"mongodb://localhost:27017"
+```
+Configuração no Projeto
+Após instalar o MongoDB localmente, configure a string de conexão no arquivo appsettings.json conforme o exemplo abaixo:
+
+```sh
+{
+  "ConnectionStrings": {
+    "MongoDb": "mongodb://localhost:27017"
+  }
+}
+```
 
 ## Testes Unitários
 
