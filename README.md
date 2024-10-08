@@ -121,7 +121,10 @@ Executar o MongoDB Localmente:
 
 No Windows, o MongoDB será iniciado automaticamente como um serviço. No Linux e macOS, você pode iniciar o MongoDB usando o comando:
 
+ ```sh
 mongod
+```
+
 Conectar ao MongoDB:
 
 O MongoDB estará rodando na porta padrão 27017. Para conectar ao MongoDB localmente, utilize a string de conexão:
